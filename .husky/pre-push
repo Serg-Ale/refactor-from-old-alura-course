@@ -1,4 +1,33 @@
 echo "🚀 Running pre-push hooks..."
 echo "🔨 Building project..."
 pnpm run build
+
+echo "🧪 Running tests with coverage..."
+# Run tests with coverage and capture the output (run once, not watch mode)
+COVERAGE_OUTPUT=$(pnpm exec vitest run --coverage 2>&1)
+
+# Check if tests passed
+if echo "$COVERAGE_OUTPUT" | grep -q "Test Files.*failed"; then
+  echo "❌ Tests failed! Fix the failing tests before pushing."
+  exit 1
+fi
+
+# Extract coverage percentage from the output
+COVERAGE_PERCENTAGE=$(echo "$COVERAGE_OUTPUT" | grep "All files" | head -1 | awk '{print $2}' | tr -d '%')
+
+# Check if coverage meets minimum threshold (90%)
+MIN_COVERAGE=90
+
+if [ -z "$COVERAGE_PERCENTAGE" ]; then
+  echo "❌ Could not determine test coverage. Make sure tests are running properly."
+  exit 1
+fi
+
+if (( $(echo "$COVERAGE_PERCENTAGE < $MIN_COVERAGE" | bc -l 2>/dev/null || echo "1") )); then
+  echo "❌ Test coverage is $COVERAGE_PERCENTAGE%, which is below the minimum required $MIN_COVERAGE%."
+  echo "Please improve test coverage before pushing."
+  exit 1
+fi
+
+echo "✅ Test coverage is $COVERAGE_PERCENTAGE% (minimum: $MIN_COVERAGE%)"
 echo "✅ Pre-push checks passed!"
