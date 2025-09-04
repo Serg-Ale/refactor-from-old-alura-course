@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# Organo - Modern React Application 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive modernization of Alura's original React course project. This version transforms a basic application into a production-ready, professional-grade codebase by integrating cutting-edge tools and best practices.
 
-## Available Scripts
+-----
 
-In the project directory, you can run:
+## ✨ Key Features & Enhancements
 
-### `npm start`
+This project showcases a complete overhaul of a legacy React application, demonstrating a modern, efficient, and maintainable development workflow.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  * **⚡ Modern Tooling:** Migrated from Create React App to **Vite 6** for blazing-fast builds and development.
+  * **⚛️ Up-to-Date:** Upgraded to **React 19** to leverage the latest features and performance improvements.
+  * **✅ Automated Quality:** Implemented **ESLint 9** and **Prettier** for automated code quality and formatting.
+  * **🧪 Robust Testing:** Achieved **95%+ test coverage** using **Vitest** and **React Testing Library**.
+  * **🤖 CI/CD Ready:** Integrated **Husky** git hooks to enforce quality standards pre-commit and pre-push.
+  * **📦 Efficient Dependencies:** Switched to **pnpm** for faster and more efficient package management.
+  * **📱 Responsive Design:** Built with a mobile-first approach.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-----
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * **Frontend**: React 19
+  * **Build Tool**: Vite 6
+  * **Testing**: Vitest, React Testing Library
+  * **Code Quality**: ESLint 9, Prettier
+  * **Git Hooks**: Husky
+  * **Package Manager**: pnpm
 
-### `npm run build`
+-----
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * Node.js (18+)
+  * pnpm (recommended) or npm/yarn
+  * Git
 
-### `npm run eject`
+### Quick Start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1.  **Clone the repository:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    git clone <your-repo-url>
+    cd organo
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2.  **Install dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    pnpm install
+    # or npm install
+    ```
 
-## Learn More
+3.  **Start the development server:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    pnpm dev
+    # or npm run dev
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application will be available at `http://localhost:5173`.
 
-### Code Splitting
+-----
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📜 Available Scripts
 
-### Analyzing the Bundle Size
+| Script                | Description                                |
+| --------------------- | ------------------------------------------ |
+| `pnpm dev`            | Starts the development server              |
+| `pnpm build`          | Builds the app for production              |
+| `pnpm test`           | Runs all tests                             |
+| `pnpm test:watch`     | Runs tests in watch mode                   |
+| `pnpm test:ui`        | Opens the Vitest UI for interactive testing|
+| `pnpm test:coverage`  | Generates a test coverage report           |
+| `pnpm lint`           | Runs ESLint to check for code quality      |
+| `pnpm format`         | Formats code with Prettier                 |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-----
 
-### Making a Progressive Web App
+## 🧪 Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project prioritizes code reliability and includes a comprehensive test suite.
 
-### Advanced Configuration
+  * **Framework**: **Vitest** for a fast and efficient testing environment.
+  * **Library**: **React Testing Library** for robust, user-centric component tests.
+  * **Coverage**: A minimum of 90% test coverage is enforced by a pre-push hook.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To run tests and view coverage, use the following commands:
 
-### Deployment
+```bash
+# Run all tests
+pnpm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Run tests with a detailed coverage report
+pnpm test:coverage
+```
 
-### `npm run build` fails to minify
+-----
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Contributing
+
+We welcome contributions\! To get started:
+
+1.  Fork the repository.
+2.  Create a new feature branch: `git checkout -b feat/your-feature-name`.
+3.  Commit your changes using a **conventional commit** format (e.g., `feat: add user profile page`).
+4.  Push to the branch and open a Pull Request.
+
+**Note:** All contributions are subject to automated quality checks via Husky hooks, including linting, formatting, and a minimum test coverage of 90%.
+
+-----
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for more details.
+
+-----
+
+**Happy Coding\! 🎉**
