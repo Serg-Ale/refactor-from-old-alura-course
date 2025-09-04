@@ -1,0 +1,25 @@
+echo "📝 Validating commit message..."
+
+# Read the commit message
+commit_msg=$(cat $1)
+
+# Check if commit message is empty
+if [ -z "$commit_msg" ]; then
+  echo "❌ Commit message is empty!"
+  exit 1
+fi
+
+# Conventional commit regex pattern
+pattern="^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: .{1,}"
+
+if ! echo "$commit_msg" | grep -qE "$pattern"; then
+  echo "❌ Commit message does not follow conventional commit format!"
+  echo "Expected format: type(scope): description"
+  echo "Examples:"
+  echo "  feat: add new feature"
+  echo "  fix(ui): resolve button styling"
+  echo "  docs: update README"
+  exit 1
+fi
+
+echo "✅ Commit message is valid!"

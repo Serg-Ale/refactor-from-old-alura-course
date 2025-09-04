@@ -1,0 +1,6 @@
+echo "🔍 Running pre-commit hooks..."
+echo "📝 Checking code style with ESLint..."
+pnpm run lint
+echo "🎨 Checking code formatting with Prettier..."
+pnpm run format:check
+echo "✅ Pre-commit checks passed!"

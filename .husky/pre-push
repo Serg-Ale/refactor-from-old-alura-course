@@ -1,0 +1,4 @@
+echo "🚀 Running pre-push hooks..."
+echo "🔨 Building project..."
+pnpm run build
+echo "✅ Pre-push checks passed!"
