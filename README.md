@@ -2,6 +2,14 @@
 
 A comprehensive modernization of Alura's original React course project. This version transforms a basic application into a production-ready, professional-grade codebase by integrating cutting-edge tools and best practices.
 
+## 📚 Original Project Source
+
+This project is a modernized version of the original **Organo** application from Alura's React course.
+
+**Original Repository:** [lfrprazeres/organo](https://github.com/lfrprazeres/organo)
+
+The original project was a basic Create React App implementation. This version represents a complete modernization with current industry standards and best practices.
+
 -----
 
 ## ✨ Key Features & Enhancements
